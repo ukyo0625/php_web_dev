@@ -6,7 +6,11 @@ include('../app/_parts/_header.php')
 ?>
 
 <form action="result.php" method="get">
-  <textarea name="message"></textarea>
+  <select name="color">
+    <option value="orange">Orange</option>
+    <option value="pink">Pink</optoon>
+    <option value="gold">Gold</option>
+  </select>
   <button>Send</button>
 </form>
 
