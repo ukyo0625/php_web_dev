@@ -2,6 +2,8 @@
 
 require('../app/functions.php');
 
+$color = filter_input(INPUT_COOKIE,'color') ?? 'transparent';
+
 include('../app/_parts/_header.php')
 ?>
 
