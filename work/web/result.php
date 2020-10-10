@@ -2,13 +2,17 @@
 
 require('../app/functions.php');
 
-$colorFromGet = filter_input(INPUT_GET, 'color') ?? 'transparent';
-$_SESSION['color'] = $colorFromGet;
+$message = trim(filter_input(INPUT_POST, 'message'));
+$message = $message !== '' ? $message : '...';
+
+$filename = '../app/messages.txt';
+$fp = fopen($filename, 'a');
+fwrite($fp, $message . "\n");
+fclose($fp);
 
 include('../app/_parts/_header.php');
 ?>
-
-<p><?= nl2br(h($color)); ?></p>
+<p>Message added!</p>
 <p><a href="index.php">Go back</a></p>
 
 <?php
