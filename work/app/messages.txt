@@ -1,5 +1,2 @@
 hello!
 hi!
-howdi
-...
-howdi
